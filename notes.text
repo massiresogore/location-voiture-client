@@ -1,0 +1,65 @@
+-   installation de react hoo form
+npm install react-hook-form
+- installation de zod, framework de validation input
+npm install zod
+
+-   hook form resolver(permet d'afficher les erreurs)
+npm install @hookform/resolvers
+
+-   react hoot toast pour les notification
+npm install react-hot-toast
+
+-   React query , react devtool
+et insertion deagence
+
+-   npm install styled-components
+
+-   Delay
+npm i delay, ceci permet de cree un delai
+
+-   Skeleton loding
+npm i react-loading-skeleton , permet de simuller un loader
+
+-   picture random
+https://picsum.photos/
+
+-   interface vs type
+type on ajoute pas des propriété
+interface on peut ajouter des propriété
+
+-   markdown editor
+npm install --save react-simplemde-editor easymde
+
+-   image upload depuis bytes[] java api
+si get est :
+         queryFn: async()=> await  
+         axios.get("http://localhost:8080/api/v1/automobile/1/images")
+- https://design-system.w3.org/styles/forms.html
+svg lien site
+- https://www.svgviewer.dev/s/372407/transportation-color-moto
+et get de backend est:
+ @GetMapping("/{automobileId}/images")
+    public ResponseEntity<?> imagesByAutomobile(@PathVariable Long automobileId) throws IOException {
+        Automobile automobile = this.automobilRepository.getReferenceById(automobileId);
+
+        List<byte[]> images = service.downloadImagesFromFileSystem(automobile);
+        List<String> base64Photos = new ArrayList<>();
+
+        for(byte[] bites: images){
+            String base64Photo = Base64.encodeBase64String(bites);
+            base64Photos.add(base64Photo);
+        }
+
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(base64Photos);
+    }
+
+l'affichage est :
+
+    {data?.data.map((image:any, index: number)=> 
+        <img key={index} src={`data:image/jpg;base64, ${image}`} alt="" />
+    )}
+
+- react markdown pour afficher les paragraphe écrit en markdown
+npm i react-markdown, installer avec sudo, je ne sais pas pourquoi😜
+- 
