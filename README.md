@@ -485,4 +485,11 @@ permet de gerer les affichages des heures
 
 
 
-# location-voiture-client
+### location-voiture-client
+
+## Framework css
+- Radix ui
+- Tailwind css
+
+## Gestion de state
+-   Redux 
